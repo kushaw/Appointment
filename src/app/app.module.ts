@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './header/nav/nav.component';
 import { ContentComponent } from './content/content.component';
-
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -18,10 +18,12 @@ import { ContentComponent } from './content/content.component';
     ContentComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }

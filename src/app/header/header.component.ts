@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from './../app.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  mainVar:any;
+  constructor(private _appservices:AppService) { }
 
   ngOnInit() {
+    this.mainVar = this._appservices.getvar();
   }
 
 }

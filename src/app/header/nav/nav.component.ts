@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from './../../app.service';
+
 
 @Component({
   selector: 'app-nav',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.less']
 })
 export class NavComponent implements OnInit {
-
-  constructor() { }
+  title = 'Application App';
+  mainVar:any;
+  constructor(private _appservices:AppService) { }
 
   ngOnInit() {
+    this.mainVar = this._appservices.getvar();
+    this.title =  this.mainVar.Title;
+    console.log (this.mainVar);
   }
+  
 
 }
