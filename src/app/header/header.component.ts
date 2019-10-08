@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { TitleService } from '../services/title.service';
+import { Title } from '../models/Title';
+
 
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less']
+  styleUrls: ['./header.component.less'],
+  providers: [TitleService]
 })
 export class HeaderComponent implements OnInit {
-  title:string="Appointment App";
-  constructor() { }
+  titles:string = "";
+  constructor(private titleService:TitleService) { 
+    this.titles = this.titleService.getTitles();
+  }
 
   ngOnInit() {
+    
   }
 
 }

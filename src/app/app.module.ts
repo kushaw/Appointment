@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TitleService } from './services/title.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FooterComponent } from './footer/footer.component';
     NgbAlertModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TitleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
