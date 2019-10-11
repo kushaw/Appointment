@@ -1,3 +1,4 @@
+import { HeaderData } from './../models/HeaderData';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -7,15 +8,10 @@ export class TitleService {
 
   constructor() { }
 
- private  headerData= {
-      title:'Appointment App',
-      discription: " blaagafafg fgadf"
-  }
-
   getTitles(){
-    return this.headerData.title;
+   return HeaderData.data.title
   }
   setTitles(str:string){
-    this.headerData.title = str;
+    HeaderData.data.title = str;
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TitleService } from '../services/title.service';
-import { Title } from '../models/Title';
+import { TitleService } from '../../services/title.service';
+import { Title } from '../../models/Title';
 
 
 @Component({
