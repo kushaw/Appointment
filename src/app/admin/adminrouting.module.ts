@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './admin/home/home.component';
-import { AboutComponent } from './admin/about/about.component';
-import { ContactComponent } from './admin/contact/contact.component';
-
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -16,5 +15,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
-//export const compList =[HomeComponent,AboutComponent,ContactComponent];
+export class AadminroutingModule { }
+export const compList =[HomeComponent,AboutComponent,ContactComponent];
